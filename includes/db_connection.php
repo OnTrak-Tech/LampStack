@@ -4,10 +4,10 @@ $env_path = dirname(__DIR__) . '/.env';
 $env_vars = parse_ini_file($env_path);
 
 // Database connection parameters
-$host = $env_vars['DB_HOST'] ?? 'localhost';
-$username = $env_vars['DB_USERNAME'] ?? 'admin';
+$host = $env_vars['DB_HOST'] ?? '';
+$username = $env_vars['DB_USERNAME'] ?? '';
 $password = $env_vars['DB_PASSWORD'] ?? ''; 
-$database = $env_vars['DB_DATABASE'] ?? 'lampstackdb';
+$database = $env_vars['DB_DATABASE'] ?? '';
 
 // Create connection
 $conn = mysqli_connect($host, $username, $password, $database);
