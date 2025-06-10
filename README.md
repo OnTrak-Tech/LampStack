@@ -1,37 +1,96 @@
-# Simple PHP CRUD Application
+# 🚀 LAMP Stack CRUD Application
 
-A basic CRUD (Create, Read, Update, Delete) application built with vanilla PHP.
+<div align="center">
+  
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Apache](https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=apache&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
 
-## Features
+**A modern, responsive CRUD application with automated deployment**
 
-- Create new user records
-- Read and display all user records
-- Update existing user records
-- Delete user records
-- Responsive design with CSS
+[Features](#✨-features) • [Quick Start](#🚀-quick-start) • [Ansible Deployment](#⚙️-ansible-deployment) • [Screenshots](#📸-screenshots)
 
-## Setup Instructions
+</div>
 
-1. Make sure you have a web server with PHP and MySQL installed (like XAMPP, WAMP, or LAMP)
-2. Place the `php_crud` folder in your web server's document root
-3. Update the database connection parameters in `includes/db_connection.php` if needed
-4. Access the application through your web browser (e.g., http://localhost/php_crud/)
-5. The application will automatically create the database and table if they don't exist
+## ✨ Features
 
-## Database Structure
+- **Create, Read, Update, Delete** - Full user record management
+- **Responsive Design** - Beautiful interface that works on all devices
+- **Environment Configuration** - Secure credential management
+- **Ansible Automation** - One-command deployment to your servers
 
-The application uses a MySQL database with the following structure:
+## 🚀 Quick Start
 
-- Database name: `crud_db`
-- Table name: `users`
-- Fields:
-  - `id` (INT, Primary Key, Auto Increment)
-  - `name` (VARCHAR)
-  - `email` (VARCHAR)
-  - `phone` (VARCHAR)
-  - `created_at` (TIMESTAMP)
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/lampstack.git
 
-## File Structure
+# Navigate to project directory
+cd lampstack
 
-- `index.php` - Main application file with all CRUD operations
-- `includes/db_connection.php` - Database connection configuration
+# Set up your environment file
+cp .env.example .env
+# Edit .env with your database credentials
+
+# Access via your web server
+# http://localhost/lampstack
+```
+
+## ⚙️ Ansible Deployment
+
+Deploy your application to production with a single command:
+
+```bash
+cd ansible
+./deploy.sh
+```
+
+## 🏗️ Project Structure
+
+```
+LampStack/
+├── 📁 includes/          # Core functionality
+├── 📁 ansible/           # Deployment automation
+├── 📄 .env               # Environment configuration
+├── 📄 index.php          # Main application
+└── 📄 README.md          # Documentation
+```
+
+## 📊 Database Schema
+
+| Field | Type | Description |
+|-------|------|-------------|
+| id | INT | Primary Key, Auto Increment |
+| name | VARCHAR(100) | User's full name |
+| email | VARCHAR(100) | User's email address |
+| phone | VARCHAR(15) | Contact number |
+| created_at | TIMESTAMP | Record creation time |
+
+## 🔒 Security Features
+
+- Environment-based configuration
+- Input sanitization
+- Prepared statements
+- Error handling
+
+## 🛠️ Requirements
+
+- PHP 7.0+
+- MySQL 5.7+ / MariaDB
+- Apache web server
+- Ansible 2.9+ (for automated deployment)
+
+## 📝 License
+
+This project is open-source under the MIT License.
+
+---
+
+<div align="center">
+  <p>Author: Gideon Adjei</p>
+  <p>
+    <a href="https://github.com/OnTrak">GitHub</a> •
+    <a href="http://3.250.233.89/">Website</a>
+  </p>
+</div>

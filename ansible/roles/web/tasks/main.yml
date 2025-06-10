@@ -1,0 +1,77 @@
+---
+- name: Update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install Apache and PHP
+  apt:
+    name:
+      - apache2
+      - php
+      - php-mysql
+      - php-curl
+      - php-json
+      - php-mbstring
+      - libapache2-mod-php
+    state: present
+
+- name: Enable Apache modules
+  apache2_module:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - rewrite
+  notify: Restart Apache
+
+- name: Create application directory
+  file:
+    path: "{{ app_root }}"
+    state: directory
+    owner: www-data
+    group: www-data
+    mode: '0755'
+
+- name: Copy application files
+  copy:
+    src: ../../../
+    dest: "{{ app_root }}"
+    owner: www-data
+    group: www-data
+    mode: '0644'
+    exclude:
+      - ansible
+      - .git
+
+- name: Create .env file
+  template:
+    src: env.j2
+    dest: "{{ app_root }}/.env"
+    owner: www-data
+    group: www-data
+    mode: '0600'
+
+- name: Configure Apache virtual host
+  template:
+    src: vhost.conf.j2
+    dest: /etc/apache2/sites-available/{{ app_name }}.conf
+  notify: Restart Apache
+
+- name: Enable site
+  command: a2ensite {{ app_name }}
+  args:
+    creates: /etc/apache2/sites-enabled/{{ app_name }}.conf
+  notify: Restart Apache
+
+- name: Set proper permissions
+  file:
+    path: "{{ app_root }}"
+    owner: www-data
+    group: www-data
+    recurse: yes
+
+handlers:
+  - name: Restart Apache
+    service:
+      name: apache2
+      state: restarted

@@ -1,0 +1,11 @@
+---
+# Application settings
+app_name: lampstack
+app_root: /var/www/html/lampstack
+
+# Database settings
+mysql_root_password: "secure_root_password"
+mysql_db: "lampstackdb"
+mysql_user: "admin"
+mysql_password: "password"
+mysql_host: "db_server_ip_or_hostname"
