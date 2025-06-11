@@ -6,10 +6,11 @@
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Apache](https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=apache&logoColor=white)
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **A modern, responsive CRUD application with automated deployment**
 
-[Features](#✨-features) • [Quick Start](#🚀-quick-start) • [Ansible Deployment](#⚙️-ansible-deployment) • [Screenshots](#📸-screenshots)
+[Features](#✨-features) • [Architecture](#🏛️-architecture) • [Live Demo](#🌐-live-demo) • [Quick Start](#🚀-quick-start)
 
 </div>
 
@@ -19,6 +20,21 @@
 - **Responsive Design** - Beautiful interface that works on all devices
 - **Environment Configuration** - Secure credential management
 - **Ansible Automation** - One-command deployment to your servers
+- **High Availability** - AWS infrastructure with auto-scaling capabilities
+
+## 🏛️ Architecture
+
+This application is deployed on AWS with a high-availability architecture:
+
+- **Auto Scaling Group (ASG)** - Automatically adjusts capacity to maintain performance
+- **Elastic Load Balancer (ELB)** - Distributes incoming traffic across multiple instances
+- **Target Groups** - Routes requests to registered targets (EC2 instances)
+- **Multiple Availability Zones** - Ensures reliability and fault tolerance
+
+## 🌐 Live Demo
+
+Access the live application:
+- [Lampstack-89535853.eu-west-1.elb.amazonaws.com](http://Lampstack-89535853.eu-west-1.elb.amazonaws.com)
 
 ## 🚀 Quick Start
 
@@ -91,6 +107,7 @@ This project is open-source under the MIT License.
   <p>Author: Gideon Adjei</p>
   <p>
     <a href="https://github.com/OnTrak">GitHub</a> •
-    <a href="http://3.250.233.89/">Website</a>
+    <a href="http://3.250.233.89/">Website</a> •
+    <a href="http://Lampstack-89535853.eu-west-1.elb.amazonaws.com">Load Balancer Link</a>
   </p>
 </div>
