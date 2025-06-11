@@ -29,12 +29,21 @@ This application is deployed on AWS with a high-availability architecture:
 - **Auto Scaling Group (ASG)** - Automatically adjusts capacity to maintain performance
 - **Elastic Load Balancer (ELB)** - Distributes incoming traffic across multiple instances
 - **Target Groups** - Routes requests to registered targets (EC2 instances)
+- **RDS Database** - Managed MySQL database service for high availability
 - **Multiple Availability Zones** - Ensures reliability and fault tolerance
 
 ## 🌐 Live Demo
 
 Access the live application:
-- [Lampstack-89535853.eu-west-1.elb.amazonaws.com](http://Lampstack-89535853.eu-west-1.elb.amazonaws.com)
+- EC2 Instance: [http://3.250.233.89/](http://3.250.233.89/)
+- Load Balancer: [Lampstack-89535853.eu-west-1.elb.amazonaws.com](http://Lampstack-89535853.eu-west-1.elb.amazonaws.com)
+
+## 📚 AWS Resources Documentation
+
+- **Load Balancer**: [ELB Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)
+- **Auto Scaling Groups**: [ASG Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html)
+- **Target Groups**: [Target Groups Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html)
+- **RDS Database**: [RDS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
 
 ## 🚀 Quick Start
 
