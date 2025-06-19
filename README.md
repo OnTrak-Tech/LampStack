@@ -35,7 +35,7 @@ This application is deployed on AWS with a high-availability architecture:
 ## 🌐 Live Demo
 
 Access the live application:
-- EC2 Instance: [http://3.250.233.89/](http://3.250.233.89/)
+- EC2 Instance: [http://54.195.16.174/](http://54.195.16.174)
 - Load Balancer: [Lampstack-89535853.eu-west-1.elb.amazonaws.com](http://Lampstack-89535853.eu-west-1.elb.amazonaws.com)
 
 ## 📚 AWS Resources Documentation
