@@ -21,6 +21,7 @@
 - **Environment Configuration** - Secure credential management
 - **Ansible Automation** - One-command deployment to your servers
 - **High Availability** - AWS infrastructure with auto-scaling capabilities
+- **CloudWatch Monitoring** - Real-time monitoring and alerting for application health
 
 ## 🏛️ Architecture
 
@@ -30,6 +31,7 @@ This application is deployed on AWS with a high-availability architecture:
 - **Elastic Load Balancer (ELB)** - Distributes incoming traffic across multiple instances
 - **Target Groups** - Routes requests to registered targets (EC2 instances)
 - **RDS Database** - Managed MySQL database service for high availability
+- **CloudWatch Monitoring** - Tracks metrics, logs, and application performance
 - **Multiple Availability Zones** - Ensures reliability and fault tolerance
 
 ## 🌐 Live Demo
@@ -44,6 +46,7 @@ Access the live application:
 - **Auto Scaling Groups**: [ASG Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html)
 - **Target Groups**: [Target Groups Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html)
 - **RDS Database**: [RDS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
+- **CloudWatch**: [CloudWatch Documentation](https://docs.aws.amazon.com/cloudwatch/)
 
 ## 🚀 Quick Start
 
